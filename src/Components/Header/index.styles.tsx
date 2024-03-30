@@ -17,11 +17,12 @@ export const HeaderContainer = styled.header`
   flex-direction: column;
   width: 100%;
   max-width: 100%;
-  min-height: 710px;
   background: url(${Images.WaveBackground}) no-repeat;
   background-size: cover;
   background-position: center;
-  animation: ${mymove} 3s;
+  animation: ${mymove} 2s ease-in-out alternate;
+  animation-direction: alternate;
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 `;
 
 export const TopHeader = styled.div`
@@ -39,15 +40,46 @@ export const HeaderContent = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 600px;
-  background: url(${Images.Background}) no-repeat;
-  background-position: right;
+  max-width: 100%;
+  min-height: 780px;
+  position: relative;
+
+  @media (max-width: 768px) {
+    min-height: 300px;
+  }
+`;
+
+export const Img = styled.img`
+  position: absolute;
+  right: 0;
+  bottom: -3.7%;
+  z-index: 1;
+  height: 100%;
+  object-fit: cover;
+
+  @media (max-width: 768px) {
+    left: unset;
+    right: -3%;
+    object-fit: inherit;
+    height: 300px;
+    bottom: -10px;
+  }
+  @media (max-width: 440px) {
+    left: -45%;
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    bottom: -29px;
+  }
 `;
 
 export const Pages = styled.nav`
   display: flex;
   align-items: center;
   gap: 8px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const NavLink = styled(Link)`
@@ -67,4 +99,10 @@ export const SocialIcons = styled.div`
   & > * {
     cursor: pointer;
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
+
+export const Menu = styled.button``;

@@ -10,9 +10,11 @@ import {
   Pages,
   NavLink,
   SocialIcons,
+  Img,
 } from "./index.styles";
 import { Instagram } from "@emotion-icons/bootstrap";
 import { Youtube } from "@emotion-icons/remix-line";
+import Images from "../../assets/Images";
 
 const Header = () => {
   return (
@@ -32,7 +34,9 @@ const Header = () => {
           <Youtube size={24} />
         </SocialIcons>
       </TopHeader>
-      <HeaderContent />
+      <HeaderContent>
+        <Img src={Images.Img8} alt="background-img" />
+      </HeaderContent>
     </HeaderContainer>
   );
 };
