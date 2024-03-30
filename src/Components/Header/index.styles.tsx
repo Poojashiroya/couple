@@ -1,15 +1,27 @@
 import styled from "@emotion/styled";
 import Images from "../../assets/Images";
 import { Link } from "react-router-dom";
+import { keyframes } from "@emotion/react";
+
+const mymove = keyframes`
+ 0% {
+   transform: translateY(-100px);
+ }
+ 100% {
+  transform: translateY(0px);
+ }
+`;
 
 export const HeaderContainer = styled.header`
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 100%;
-  min-height: 750px;
+  min-height: 710px;
   background: url(${Images.WaveBackground}) no-repeat;
   background-size: cover;
+  background-position: center;
+  animation: ${mymove} 3s;
 `;
 
 export const TopHeader = styled.div`
