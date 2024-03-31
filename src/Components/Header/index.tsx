@@ -43,7 +43,7 @@ const Header = () => {
       </TopHeader>
       <HeaderContent>
         <HeaderDetails>
-          <Title>Intertwined Souls</Title>
+          <Title>Pooja & Zalak</Title>
           <Description>Cultivating Deeper Connections</Description>
           <SubDescription>
             Explore the boundless adventure of partnership, where every moment

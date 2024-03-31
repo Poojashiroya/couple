@@ -45,13 +45,13 @@ export const HeaderContent = styled.div`
   position: relative;
 
   @media (max-width: 768px) {
-    min-height: 300px;
+    min-height: 600px;
   }
 `;
 
 export const Img = styled.img`
   position: absolute;
-  right: 0;
+  right: -3%;
   bottom: -3.7%;
   z-index: 1;
   height: 100%;
@@ -59,16 +59,14 @@ export const Img = styled.img`
 
   @media (max-width: 768px) {
     left: unset;
-    right: -3%;
+    right: -6.5%;
     object-fit: inherit;
-    height: 300px;
-    bottom: -10px;
-  }
-  @media (max-width: 440px) {
-    left: -45%;
+    min-height: 550px;
+    bottom: -22px;
   }
   @media (min-width: 769px) and (max-width: 1024px) {
     bottom: -29px;
+    right: -6.5%;
   }
 `;
 
@@ -123,7 +121,6 @@ const headerAnimation = keyframes`
 `;
 
 export const HeaderDetails = styled.div`
-  display: flex;
   flex-direction: column;
   padding: 9% 0 0 17%;
   max-width: 39%;
@@ -137,22 +134,56 @@ export const HeaderDetails = styled.div`
   -moz-animation: ${headerAnimation} 3s ease-in-out;
   -o-animation: ${headerAnimation} 3s ease-in-out;
   -ms-animation: ${headerAnimation} 3s ease-in-out;
+  display: flex;
+
+  @media (max-width: 580px) {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    padding: 7% 0 0 3%;
+    max-width: 43%;
+    gap: 8px;
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    padding: 7% 0 0 4%;
+    max-width: 40%;
+  }
 `;
 
 export const Title = styled.h2`
   color: #fff;
   font-size: 64px;
   font-weight: 900;
+  line-height: 1.1;
+  font-family: "Great Vibes";
+
+  @media (max-width: 768px){
+    font-size: 36px;
+  }
 `;
 
 export const Description = styled.p`
   color: #fff;
   font-size: 24px;
   font-weight: 700;
+
+  @media (max-width: 768px){
+    font-size:18px;
+    min-width: max-content;
+  }
+  @media (max-width: 585px) {
+    min-width: min-content;
+  }
 `;
 
 export const SubDescription = styled.p`
   color: #fff;
   font-size: 18px;
   font-weight: 400;
+
+  @media (max-width: 768px){
+    font-size: 14px;
+  }
 `;
