@@ -17,16 +17,21 @@ import {
   Title,
   Description,
   SubDescription,
+  MobileHeader,
 } from "./index.styles";
 import { Instagram } from "@emotion-icons/bootstrap";
-import { Youtube } from "@emotion-icons/remix-line";
+import { Close, Youtube } from "@emotion-icons/remix-line";
 import Images from "../../assets/Images";
+import { useState } from "react";
 
 const Header = () => {
+  const [showMobileMenu, setMobileMenu] = useState<boolean>(false)
+
   return (
     <HeaderContainer>
       <TopHeader>
-        <Menu size={24} />
+        {!showMobileMenu && <Menu size={24} fill={"#000"} onClick={() => setMobileMenu(true)} />}
+        {showMobileMenu && <Close size={24} fill={"#000"} onClick={() => setMobileMenu(false)}/>}
         <Logo />
         <Pages>
           <NavLink to="/">Home</NavLink>
@@ -41,6 +46,12 @@ const Header = () => {
           <Youtube size={24} />
         </SocialIcons>
       </TopHeader>
+      {showMobileMenu && <MobileHeader >
+      <NavLink to="/">Home</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/blog">Blog</NavLink>
+      </MobileHeader>}
       <HeaderContent>
         <HeaderDetails>
           <Title>Pooja & Zalak</Title>

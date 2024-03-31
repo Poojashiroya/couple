@@ -23,6 +23,7 @@ export const HeaderContainer = styled.header`
   background-position: center;
   animation: ${mymove} 2s ease-in-out alternate;
   animation-direction: alternate;
+  position: relative;
   background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 `;
 
@@ -34,6 +35,15 @@ export const TopHeader = styled.div`
   box-sizing: background;
   max-width: 100%;
   align-items: center;
+
+  @media (max-width: 768px){
+    background: #fff;
+
+    & > svg {
+      cursor: pointer;
+    }
+  }
+
 `;
 
 export const HeaderContent = styled.div`
@@ -86,6 +96,18 @@ export const NavLink = styled(Link)`
   font-size: 16px;
   text-transform: uppercase;
   color: #fff;
+
+  @media (max-width: 768px){
+    color: #000;
+    text-transform: capitalize;
+    padding: 8px;
+
+    &:hover {
+      background: grey;
+      color: #fff;
+      border-radius: 8px;
+    }
+  }
 `;
 
 export const SocialIcons = styled.div`
@@ -186,4 +208,19 @@ export const SubDescription = styled.p`
   @media (max-width: 768px){
     font-size: 14px;
   }
+`;
+
+
+export const MobileHeader = styled.div`
+ display: flex;
+ flex-direction: column;
+  gap: 8px;
+  position: absolute;
+  z-index: 2;
+  top: 72px;
+  width: 100%;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 10px;
+  box-sizing: border-box;
 `;
