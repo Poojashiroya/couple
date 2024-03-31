@@ -2,6 +2,7 @@ import {
   FacebookOutline,
   TwitterOutline,
 } from "@emotion-icons/evaicons-outline";
+
 import Logo from "../Logo";
 import {
   TopHeader,
@@ -10,14 +11,22 @@ import {
   Pages,
   NavLink,
   SocialIcons,
+  Img,
+  Menu,
+  HeaderDetails,
+  Title,
+  Description,
+  SubDescription,
 } from "./index.styles";
 import { Instagram } from "@emotion-icons/bootstrap";
 import { Youtube } from "@emotion-icons/remix-line";
+import Images from "../../assets/Images";
 
 const Header = () => {
   return (
     <HeaderContainer>
       <TopHeader>
+        <Menu size={24} />
         <Logo />
         <Pages>
           <NavLink to="/">Home</NavLink>
@@ -32,7 +41,18 @@ const Header = () => {
           <Youtube size={24} />
         </SocialIcons>
       </TopHeader>
-      <HeaderContent />
+      <HeaderContent>
+        <HeaderDetails>
+          <Title>Intertwined Souls</Title>
+          <Description>Cultivating Deeper Connections</Description>
+          <SubDescription>
+            Explore the boundless adventure of partnership, where every moment
+            is an opportunity to deepen connection, foster understanding, and
+            embrace the magic of love.
+          </SubDescription>
+        </HeaderDetails>
+        <Img src={Images.Img8} alt="background-img" />
+      </HeaderContent>
     </HeaderContainer>
   );
 };
