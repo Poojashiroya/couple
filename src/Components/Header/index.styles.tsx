@@ -138,6 +138,7 @@ const headerAnimation = keyframes`
    opacity: 0;
  }
  100% {
+  
   opacity: 1;
  }
 `;
@@ -146,18 +147,11 @@ export const HeaderDetails = styled.div`
   flex-direction: column;
   padding: 9% 0 0 17%;
   max-width: 39%;
-  animation-delay: 3s;
-  -webkit-animation-delay: 3s;
-  -moz-animation-delay: 3s;
-  -o-animation-delay: 3s;
-  -ms-animation-delay: 3s
-  animation: ${headerAnimation} 3s ease-in-out;
-  -webkit-animation: ${headerAnimation} 3s ease-in-out;
-  -moz-animation: ${headerAnimation} 3s ease-in-out;
-  -o-animation: ${headerAnimation} 3s ease-in-out;
-  -ms-animation: ${headerAnimation} 3s ease-in-out;
-  display: flex;
-
+  // animation-delay: 3s;
+  
+  animation: ${headerAnimation} 5s ease-in-out;
+ display: flex;
+ 
   @media (max-width: 580px) {
     display: none;
   }
@@ -175,7 +169,7 @@ export const HeaderDetails = styled.div`
 `;
 
 export const Title = styled.h2`
-  color: #fff;
+color:  #D264B6;;
   font-size: 64px;
   font-weight: 900;
   line-height: 1.1;
