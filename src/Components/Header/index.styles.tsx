@@ -147,8 +147,6 @@ export const HeaderDetails = styled.div`
   flex-direction: column;
   padding: 9% 0 0 17%;
   max-width: 39%;
-  // animation-delay: 3s;
-  
   animation: ${headerAnimation} 5s ease-in-out;
  display: flex;
  

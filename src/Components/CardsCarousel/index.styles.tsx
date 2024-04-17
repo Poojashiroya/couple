@@ -5,28 +5,7 @@ export const CardsContainer = styled.div`
   flex-wrap: wrap;
   max-width: 100%;
   position: relative;
-  min-height: 450px;
-
-  & > * {
-    opacity: 0.5;
-    backdrop-filter: blur(17.5px);
-    background: rgba(255, 255, 255, 0.6);
-    position: absolute;
-    left: 50px;
-    top: 5px;
-    z-index: 0;
-    height: 435px
-  }
-  
-  & > *:first-child {
-     opacity: 1;
-    left: 0;
-    backdrop-filter: blur(0px);
-    background: #fff;
-    z-index: 1;
-    top:0;
-    height: 445px;
-  }
+  height: 450px;
 `;
 
 export const Container = styled.aside`
@@ -34,14 +13,27 @@ export const Container = styled.aside`
  max-width: 1060px;
  flex-wrap: wrap;
  gap: 75px;
+ align-items: center;
+ justify-content: center;
+ padding: 67px 0;
 `
 
 export const Content = styled.div`
  display: flex;
  flex-direction: column;
  align-items: center;
+ max-width: 388px;
+ padding: 10px 20px;
+ gap: 18px;
 `;
 
-export const Title = styled.h3``;
+export const Title = styled.h3`
+ font-family: "Jost";
+ font-size: 53px;
+ line-height: 1.2;
+`;
 
-export const Description = styled.h5``;
+export const Description = styled.h5`
+ font-size: 24px;
+ font-weight: 400;
+`;

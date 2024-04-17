@@ -1,14 +1,30 @@
 import styled from "@emotion/styled";
 
-export const CardContainer = styled.section`
+export const Container = styled.button<{total: number,index: number,currentCard: number}>`
   width: 375px;
-  height: 450px;
   border-radius: 30px;
+  outline: none;
+  padding: 0;
+  backdrop-filter: ${props => props.index === props.currentCard ? "blur(0px)" : "blur(17.5px)"};
+  background: #fff;
+  position: absolute;
+  cursor: pointer;
+  left: ${props => `${props.index*50}`}px;
+  top: ${props => props.index > 0 ? `${(props.index*5)}px`: '0px'};
+  z-index: ${props =>  props.total-props.index-1};
+  height: ${props => `${450 - props.index*10}`}px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+`;
+
+export const CardContainer = styled.section`
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
   position: relative;
   overflow: hidden;
   cursor: pointer;
+
 `;
 
 export const CardContent = styled.div`
@@ -32,12 +48,12 @@ export const CardImg = styled.img`
   position: absolute;
   width: 100%;
   max-width: 100%;
-  height: 70%;
-  max-height: 70%;
+  height: 80%;
+  max-height: 80%;
   top: 0;
   left: 0;
   object-fit: cover;
-  border-radius: 30px;
+  border-radius: 30px 30px 0 0;
   z-index: 1;
   transition: transform 0.5s;
 
