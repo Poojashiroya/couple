@@ -66,6 +66,7 @@ export const Img = styled.img`
   z-index: 1;
   height: 100%;
   object-fit: cover;
+  animation: ${mymove} 4s ease-in-out alternate;
 
   @media (max-width: 768px) {
     left: unset;
