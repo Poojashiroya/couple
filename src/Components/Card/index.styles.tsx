@@ -1,20 +1,35 @@
 import styled from "@emotion/styled";
 
-export const Container = styled.button<{total: number,index: number,currentCard: number}>`
+export const Container = styled.button<{
+  total: number;
+  index: number;
+  currentCard: number;
+}>`
   width: 375px;
   border-radius: 30px;
   outline: none;
   padding: 0;
-  backdrop-filter: ${props => props.index === props.currentCard ? "blur(0px)" : "blur(17.5px)"};
+  backdrop-filter: ${(props) =>
+    props.index === props.currentCard ? "blur(0px)" : "blur(17.5px)"};
   background: #fff;
   position: absolute;
   cursor: pointer;
-  left: ${props => `${props.index*50}`}px;
-  top: ${props => props.index > 0 ? `${(props.index*5)}px`: '0px'};
-  z-index: ${props =>  props.total-props.index-1};
-  height: ${props => `${450 - props.index*10}`}px;
+  left: ${(props) => `${props.index * 90}`}px;
+  top: ${(props) => (props.index > 0 ? `${props.index * 5}px` : "0px")};
+  z-index: ${(props) => props.total - props.index - 1};
+  height: ${(props) => `${450 - props.index * 10}`}px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    height: ${(props) => `${425 - props.index * 10}`}px;
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+    z-index: ${(props) => props.currentCard === props.index ? 1:1 - props.index};
+    left: ${(props) => `${props.index * 30}`}px;
+  }
 `;
 
 export const CardContainer = styled.section`
@@ -24,7 +39,6 @@ export const CardContainer = styled.section`
   position: relative;
   overflow: hidden;
   cursor: pointer;
-
 `;
 
 export const CardContent = styled.div`
