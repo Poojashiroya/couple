@@ -1,3 +1,5 @@
+import React from "react";
+import AnimatedBg from "../Components/AnimatedBg";
 import CardsCarousel from "../Components/CardsCarousel";
 import Header from "../Components/Header";
 
@@ -6,7 +8,7 @@ const HomePage = () => {
     <div>
       <Header />
       <CardsCarousel />
-      <h1>Home Page</h1>
+      <AnimatedBg />
     </div>
   );
 };
