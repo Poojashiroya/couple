@@ -1,5 +1,5 @@
 import React from "react";
-import { AnimatedBgContainer, Content, ImgContainer, RoundImage} from "./index.styles";
+import { AnimatedBgContainer, Content, Description, ImgContainer, RoundImage, Title} from "./index.styles";
 import Images from "../../assets/Images";
 
 const AnimatedBg = () => {
@@ -10,8 +10,8 @@ const AnimatedBg = () => {
              <RoundImage src={Images.ZalakProfile} alt="zalak"/>
             </ImgContainer>
             <Content>
-                <h5>Title</h5>
-                <p>check</p>
+                <Title>MORE THAN I SHOULD</Title>
+                <Description>A story about falling in and out of love</Description>
             </Content>
         </AnimatedBgContainer>
     )

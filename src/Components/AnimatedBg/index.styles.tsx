@@ -81,10 +81,59 @@ export const RoundImage = styled.img`
 // clip-path: polygon(-41% 0, 50% 91%, 141% 0);
 `;
 
+const textContainer = keyframes`
+	0% {
+		transform: translate(0, 0);
+        border-radius: 50px 0 50px 0;
+	}
+	100% {
+		transform: translate(0px, 0px);
+        border-radius: 0 50px 0 50px;
+	}
+`
+
 export const Content = styled.div`
   width: 60%;
-  border-radius: 0 30px 0 30px;
-  margin: 0 auto;
+  border-radius: 0 50px 0 50px;
+  margin: 48px auto 24px;
   padding: 20px;
-  background: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+  animation: ${textContainer} 5s ease-in-out;
+  animation-delay: 5s;
+
+  @media (max-width: 768px){
+    margin: 12px auto;
+  }
 `;
+
+
+const text = keyframes`
+	0% {
+		transform: translateX(-50%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+`
+
+export const Title = styled.h3`
+// font-family: "Dancing Script";
+font-size: 48px;
+font-weight: 900;
+animation: ${text} 5s linear;
+animation-delay: 5s;
+`
+
+
+
+export const Description = styled.p`
+ font-size: 32px;
+ font-weight: 700;
+ font-family: "Dancing Script";
+ animation: ${text} 5s linear;
+animation-delay: 5s;
+`
