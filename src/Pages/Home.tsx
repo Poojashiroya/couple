@@ -1,4 +1,3 @@
-import React from "react";
 import AnimatedBg from "../Components/AnimatedBg";
 import CardsCarousel from "../Components/CardsCarousel";
 import Header from "../Components/Header";

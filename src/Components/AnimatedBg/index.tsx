@@ -1,4 +1,3 @@
-import React from "react";
 import { AnimatedBgContainer, Content, Description, ImgContainer, RoundImage, Title} from "./index.styles";
 import Images from "../../assets/Images";
 
